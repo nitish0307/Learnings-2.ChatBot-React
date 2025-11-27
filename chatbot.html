@@ -146,7 +146,7 @@
         return (
           <div className = "chat-input-container">
             <input 
-              placeholder="Send a message to the Chatbot" 
+              placeholder="Send a message to the chatbot" 
               size="30" 
               onChange = {saveInputText}
               value={inputText}
@@ -217,15 +217,12 @@
       
       function App() {
         const [chatMessages, setChatMessages] = React.useState([])
-        //const [chatMessages, setChatMessages] = array;   // Array Destructuring Shortcut
-        // const chatMessages = array[0];
-        // const setChatMessages = array[1];
 
         return (
           <div className = "app-container">
             {chatMessages.length === 0 && (
               <p className = "welcome-message">
-                Welcome to the chatbot project! send a message using the textbox below.
+                Hey, Send a message using the textbox below.
                 </p>
             )}
             <ChatMessages 
@@ -238,8 +235,6 @@
           </div>
         );
       }
-      
-
     
       const container = document.querySelector('.js-container');
       ReactDOM.createRoot(container).render(<App />);
